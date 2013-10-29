@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"    
+      xmlns:h="http://java.sun.com/jsf/html">
+    <head>
+        <title>JSF Demo</title>
+    </head>
+    <h:body>
+        <hr/>
+        <h2 align="center">h::selectOneListbox Example</h2>
+        <center>
+            <h:form>
+                <h3>Make your pizza choice </h3> 
+                <h:selectOneListbox value="#{userData.pizzaData}">
+                    <f:selectItem itemValue="Cheese" itemLabel="Cheese" />
+                    <f:selectItem itemValue="Cheese &amp; Sausage" itemLabel="Cheese &amp; Sausage" />
+                    <f:selectItem itemValue="Cheese &amp; Pepperoni" itemLabel="Cheese &amp; Pepperoni" />
+                    <f:selectItem itemValue="Hawaiian" itemLabel="Hawaiian" />
+                    <f:selectItem itemValue="Chicken Alfredo" itemLabel="Chicken Alfredo" />				
+                </h:selectOneListbox> 
+                <br/>
+                <hr/>
+                <h2 align="center">h::selectManyListbox Example</h2>
+                <h3>Make your topping choices </h3> 
+                <h:selectManyListbox value="#{userData.toppingData}">
+                    <f:selectItem itemValue="" itemLabel="" />
+                    <f:selectItem itemValue="Mushrooms" itemLabel="Mushrooms" />
+                    <f:selectItem itemValue="Black Olives" itemLabel="Black Olives" />
+                    <f:selectItem itemValue="Green Peppers" itemLabel="Green Peppers" />
+                    <f:selectItem itemValue="Onions" itemLabel="Onions" />
+                    <f:selectItem itemValue="Tomatoes" itemLabel="Tomatoes" />
+                </h:selectManyListbox>
+                <br/>
+                <h:commandButton value="Submit" action="result" />
+            </h:form> 
+        </center>
+    </h:body>
+</html> 
+
